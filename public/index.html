@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Banking app</title>
+  </head>
+  <body
+    class="bg-gray-100 min-h-screen flex flex-col items-center justify-center"
+  >
+    <div class="bg-white shadow-md rounded-lg p-8 w-full max-w-md">
+      <h1 class="text-2xl font-bold mb-4 text-center">User balance</h1>
+      <div class="text-center mb-6">
+        <p class="text-xl">
+          Current Balance
+          <span class="font-semibold"
+            >kshs<span id="balance">1000.00</span></span
+          >
+        </p>
+      </div>
+      <form class="mb-6">
+        <div class="mb-4">
+          <label for="amount" class="block text-gray-700 font-bold mb-2"
+            >Enter Amount:</label
+          >
+          <input
+            type="number"
+            id="amount"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Amount"
+          />
+        </div>
+        <div class="flex justify-between">
+          <button
+            type="button"
+            id="depositBtn"
+            class="bg-green-900 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Deposit
+          </button>
+          <button
+            type="button"
+            id="withdrawBtn"
+            class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Withdraw
+          </button>
+        </div>
+      </form>
+      <h2 class="text-xl font-bold mb-4 text-center">Transaction History</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white">
+          <thead>
+            <tr>
+              <th class="px-4 py-2 border">#</th>
+              <th class="px-4 py-2 border">Date</th>
+              <th class="px-4 py-2 border">Transaction Code</th>
+              <th class="px-4 py-2 border">Amount</th>
+              <th class="px-4 py-2 border">Type</th>
+            </tr>
+          </thead>
+          <tbody id="transactionTable">
+            <!-- Transactions will be dynamically added here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
